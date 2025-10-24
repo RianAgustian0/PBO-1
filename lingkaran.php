@@ -6,6 +6,10 @@ class LuasLingkaran
     public const phi = 3.14;
     public int $jari;
 
+    public function __construct($isijari = 1){
+        $this->jari = $isijari;
+    }
+
     public function tampil($nama = 'ban')
     {
         $rumus = LuasLingkaran::phi * $this->jari * $this->jari;
@@ -17,9 +21,13 @@ class LuasLingkaran
         echo "<br/>";
         echo "ini dari static: ";
     }
+
+    public function __destruct(){
+        echo "<br/>";
+        echo "au ah cape: ";
+    }
 }
 
 $lingkaran = new LuasLingkaran();
-$lingkaran->jari = 7;
-$lingkaran->tampil();
+$lingkaran->tampil('roda');
 LuasLingkaran::testing();
