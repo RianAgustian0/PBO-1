@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Math; //namespace
+
 class LuasLingkaran
 {
 
@@ -27,7 +29,3 @@ class LuasLingkaran
         echo "au ah cape: ";
     }
 }
-
-$lingkaran = new LuasLingkaran();
-$lingkaran->tampil('roda');
-LuasLingkaran::testing();
